@@ -12,6 +12,7 @@
 
     <ItemGroup>
       <PackageReference Include="FSharp.SystemTextJson" Version="1.0.6" />
+      <PackageReference Include="FSharp.SystemTextJson.Swagger" Version="0.0.2" />
       <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
       <PackageReference Include="System.Text.Json" Version="7.0.0" />
     </ItemGroup>

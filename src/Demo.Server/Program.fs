@@ -4,6 +4,7 @@ open Microsoft.AspNetCore.Builder
 open Microsoft.Extensions.DependencyInjection
 open Microsoft.Extensions.Hosting
 open System.Text.Json.Serialization
+open FSharp.SystemTextJson.Swagger
 
 module Program =
     [<EntryPoint>]
@@ -23,6 +24,9 @@ module Program =
                     JsonFSharpConverter(unionEncoding = ( JsonUnionEncoding.ThothLike ||| JsonUnionEncoding.UnwrapOption))
                 )   
             )
+            
+        let fsOptions = JsonFSharpOptions()
+        builder.Services.AddSwaggerForSystemTextJson(fsOptions)
         
         let app = builder.Build()
         app.UseHttpsRedirection()
