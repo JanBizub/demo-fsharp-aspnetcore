@@ -25,8 +25,9 @@ module Program =
                 )   
             )
             
-        let fsOptions = JsonFSharpOptions()
-        builder.Services.AddSwaggerForSystemTextJson(fsOptions)
+        // --> FSharp.SystemTextJson.Swagger
+        // let fsOptions = JsonFSharpOptions() 
+        // builder.Services.AddSwaggerForSystemTextJson(fsOptions)
         
         let app = builder.Build()
         app.UseHttpsRedirection()

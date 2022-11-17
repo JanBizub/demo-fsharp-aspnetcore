@@ -14,3 +14,9 @@ type PersonController (logger : ILogger<PersonController>) =
         { Name = "Vatnik"
           Alignment = Alignment.Evil
           GenderTransition = "Died duting operation" |> Error }
+        
+    [<HttpGet>]
+    member _.Get(id) =
+        { Name = "Vatnik"
+          Alignment = Alignment.Evil
+          GenderTransition = "Died duting operation" |> Error }
